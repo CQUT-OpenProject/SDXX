@@ -1,0 +1,9 @@
+name: dl
+channels:
+  - defaults
+dependencies:
+  - python=3.7.5
+  - scikit-learn=0.23.2
+  - spyder
+  - notebook
+prefix: .conda/dl

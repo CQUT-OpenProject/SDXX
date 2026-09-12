@@ -1,0 +1,89 @@
+\documentclass{report}
+
+\university{重庆理工大学}
+\coursetitle{深度学习}
+\college{计算机科学与工程学院}
+\studentid{}
+\authorname{}
+\advisor{}
+\reportdate{}
+\expnum{1}
+\exptitle{环境搭建与 python 初步应用}
+
+\begin{document}
+
+\makecover
+
+\makereportheader
+
+\sectheader{实验目的：}
+1）掌握 Anaconda 的安装、配置方法\par
+2）熟悉 python 编程运用
+
+\sectheader{实验内容：}
+
+\exlabel{Ex1}自行上网查阅相关资料，学习 Anaconda 的下载与安装，学习图形化管理与命令行管理的概念，学习 Anaconda 里环境的概念，学习 Anaconda 下载源的更换，完成下载 Anaconda 文件并安装，完成更换清华大学下载源，完成新建环境“dl”。\par
+\vspace{0.8ex}
+\exlabel{Ex2}自行上网查阅相关资料，学习在 Anaconda 下安装库，完成在 dl 环境中安装 Python（3.7.5）、Sklearn（0.23.2）及 spyder 和 Jupyter Notebook 等。\par
+\vspace{0.8ex}
+\exlabel{Ex3}用 Python 语言实现水藻生长的迭代法应用\par
+迭代法是一种步步为营，逐次推进，逐步接近的现代计算机求解问题的基本形式。迭代法的核心是建立迭代关系式。\par
+假设在空池塘中放入一颗水藻，该类水藻会每周长出三颗新的水藻，问十周后，池塘中有多少颗水藻？\par
+第 1 周的水藻数量：1；\par
+第 2 周的水藻数量：$1 + 1 \times 3$；\par
+第 3 周的水藻数量：$1 + 1 \times 3 + (1 + 1 \times 3) \times 3$\par
+…\par
+可以归纳出从当前周水藻数量到下一周水藻数量的迭代关系式。设上周水藻数量为 $x$，从上周到本周水藻将增加的数量为 $y$，本周的水藻数量为 $x'$，那么在一次迭代中：
+\[
+  y \leftarrow 3x
+\]
+\[
+  x' \leftarrow x + y
+\]
+迭代开始时，水藻的数量为 1，为迭代法的初始条件。
+
+迭代次数为 9（不包括第一周），为迭代过程的控制条件。\par
+用 Python 语言编程实现上述问题的求解。\par
+\vspace{0.8ex}
+\exlabel{Ex4}用迭代法实现方程求解
+\[
+  x^3 + \frac{e^x}{2} + 5x - 6 = 0
+\]
+该方程很难用解析的方法直接求解。\par
+应用迭代法来求解，如何建立迭代关系式呢？\par
+提示：将 $f(x) = 0$ 变换为 $x = \varphi(x)$，建立迭代关系式：
+\[
+  x_{k+1} = \varphi(x_k),
+\]
+如果 $\{x_k\}$ 收敛于 $x^*$，那么 $x^*$ 就是方程的根，因为：
+\[
+  x^* = \lim_{k\to\infty} x_{k+1} = \lim_{k\to\infty} \varphi(x_k) = \varphi\left(\lim_{k\to\infty} x_k\right) = \varphi(x^*)
+\]
+即当 $x = x^*$ 时，有 $f(x) = x - \varphi(x) = 0$\par
+则建立迭代关系式为：
+\[
+  x = \frac{6 - x^3 - \frac{e^x}{2}}{5}
+\]
+根据数列 $|x_{k+1} - x_k|$ 的变化，将值小于 0.0001 作为迭代结束的标准。
+
+\sectdivider
+\sectheader{Ex3 源代码：}
+\lstinputlisting[style=cqutpython]{code/ex3_algae.py}
+
+\sectdivider
+\sectheader{运行（测试）过程及结果：}
+\resultspace[3.2cm]
+
+\sectdivider
+\sectheader{Ex4 源代码：}
+\lstinputlisting[style=cqutpython]{code/ex4_newton.py}
+
+\sectheader{运行（测试）过程及结果：}
+\resultspace[3.2cm]
+
+\clearpage
+
+\sectheader{总结：}
+\resultspace[8cm]
+
+\end{document}

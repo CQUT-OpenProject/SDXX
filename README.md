@@ -1,5 +1,9 @@
 ## 深度学习（双语）
 
+> [!NOTE]
+> 1. 由于 conda 库体积较大，推荐安装 [Miniconda](https://docs.anaconda.com/miniconda/)，本仓库同样使用 Miniconda 管理实验环境
+> 2. 实验报告及部分工程使用智能体辅助编写，可能存在不准确的情况，所有内容仅供参考
+
 ## 目录导航
 
 | 目录或文件 | 内容 |
@@ -10,9 +14,6 @@
 | [`environment.yml`](environment.yml) | Conda 环境依赖 |
 
 ## 环境与运行
-
-> [!NOTE]
-> 1. 由于 conda 库体积较大，推荐安装 [Miniconda](https://docs.anaconda.com/miniconda/)，本仓库同样使用 Miniconda 管理实验环境
 
 在仓库根目录执行（`cd` 到本仓库）：
 

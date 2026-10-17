@@ -11,6 +11,7 @@
 | [`EXP/EXP_1/`](EXP/EXP_1/) | Python 环境搭建与初步应用 |
 | [`EXP/EXP_2/`](EXP/EXP_2/) | PyTorch 环境搭建与初步应用 |
 | [`EXP/EXP_3/`](EXP/EXP_3/) | 线性回归算法实现及应用 |
+| [`EXP/EXP_4/`](EXP/EXP_4/) | 神经网络模型应用（自动求导与 MNIST 分类） |
 | [`EXP/report(template)/`](<EXP/report(template)/>) | LaTeX 报告模板、示例代码与素材 |
 | [`environment.yml`](environment.yml) | Conda 环境依赖 |
 

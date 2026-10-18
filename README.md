@@ -4,6 +4,8 @@
 > 1. 由于 conda 库体积较大，推荐安装 [Miniconda](https://docs.anaconda.com/miniconda/)，本仓库同样使用 Miniconda 管理实验环境
 > 2. 实验报告及部分工程使用智能体辅助编写，可能存在不准确的情况，所有内容仅供参考
 
+LaTeX 实验报告见 [`EXP/report(template)/`](<EXP/report(template)/>)。
+
 ## 目录导航
 
 | 目录或文件 | 内容 |
